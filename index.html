@@ -212,8 +212,8 @@
             { title: "Current Time", info: "2:44 PM." },
             { title: "Address of Origin", info: "506 Leon Sullivan Way, Charleston, WV 25301." },
             { title: "Address of Destination", info: "4825 MacCorkle Ave SW Ste D, South Charleston, WV 25309." },
-            { title: "Distance to Destination", info: "0" },
-            { title: "Estimated Time to Destination", info: "0" },
+            { title: "Distance to Destination", info: "6.64 miles." },
+            { title: "Estimated Time to Destination", info: "14 minutes" },
             { title: "State of Charge of Battery", info: "33% charge." },
             { title: "Range of Current Battery", info: "99 minutes." },
             { title: "Estimated Drive Distance with Current Charge", info: "75 miles." },
@@ -231,10 +231,10 @@
                 name: 'Shanklin Parking Garage',
 
                 location: '501 Virginia St E, Charleston, WV 25301, USA',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',   
+                originDistance: '1.07',
+                originTime: '6',
+                destDistance: '5.85',
+                destTime: '10',   
 
                 waitTime: [
                         { type: 'J1772', value: '0' }
@@ -270,13 +270,13 @@
                 name: 'Thomas Memorial Hospital',
 
                 location: '424 Division St, South Charleston, WV 25309',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '6.47',
+                originTime: '13',
+                destDistance: '0.27',
+                destTime: '1',
 
                 waitTime: [
-                        { type: 'J1772', value: '37' }
+                        { type: 'J1772', value: '0' }
                     ],
                 plugNumb: [
                         { type: 'J1772', value: '2' }
@@ -288,7 +288,7 @@
                         { type: 'J1772', value: '1' }
                     ],       
 
-                energySource: '41% grid, 59% renewable',
+                energySource: '84% grid, 16% renewable',
 
                 chargingFee: '$0.00',
                 chargingFeeRate: 'for any amount of power',
@@ -296,9 +296,9 @@
                 parkingFee: '$0.00',
                 parkingFeeRate: 'for any amount of time',
 
-                coffee: 'Yes. <br><br> There is a coffee shop in walking distance 0.4 miles away.',
-                grocery: 'Yes. <br><br> There is a grocery store in walking distance 0.4 miles away.',
-                sportsClothes: 'No. <br><br> There are no sports or clothing stores in walking distance.',
+                coffee: 'Yes. <br><br> There is a coffee shop in walking distance 0.1 miles away.',
+                grocery: 'Yes. <br><br> There is a grocery store in walking distance 0.7 miles away.',
+                sportsClothes: 'Yes. <br><br> There is a sports or clothing stores in walking distance 0.4 miles away.',
                 
                 rating: '★ ★ ★ ✰ ✰',  
                 ratingNum: '19',
@@ -935,8 +935,8 @@
         // Add route time/distance to instructions & update charging station details
         map.on('load', async () => {
             await getRoute(0); // Ensure this is awaited properly
-            await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
-            await updateChargingStationDetails();  // Ensure this is awaited properly
+            // await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
+            // await updateChargingStationDetails();  // Ensure this is awaited properly
             addChargingStations();  // You might need to re-add stations to reflect updated data
         });
 
